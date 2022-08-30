@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HW
 {
-    internal class ListAcc<T>
+    class ListAcc<T>
     {
         private string name;
         private string surname;
@@ -31,14 +32,15 @@ namespace HW
             
         }
 
-        public void Write()
+        public string Write()
         {
             
             Console.WriteLine($"Колличество человек в списке: {(object)ListAcc<T>.Count}");
             Console.WriteLine("Введите номер человека:");
             var name = Convert.ToInt32(Console.ReadLine());
             long acc = name;
-            Console.WriteLine($"Имя: {this.name[name]};\nФамилия: {this.surname[name]};\nНомер счета: {this.numAcc[acc]};\nБаланс: {this.ballance[name]};\nТип счета: {this.type[name]}");
+            string R = Console.WriteLine($"Имя: {this.name[name]};\nФамилия: {this.surname[name]};\nНомер счета: {this.numAcc[acc]};\nБаланс: {this.ballance[name]};\nТип счета: {this.type[name]}");
+            return R;
         }
     }
 }

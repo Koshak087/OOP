@@ -1,4 +1,5 @@
 ﻿using HW;
+using NPOI.SS.Formula.Functions;
 
 static void Main(string[] args)
 {
@@ -27,5 +28,13 @@ static void Main(string[] args)
 
     Account newAcc = new Account(fname, sname, num, sBall, tAcc);
 
-    
+    string check;
+    Console.Write("Посмотреть список всех клиентов банка?(Да.Нет): ");
+    check = Console.ReadLine();
+    if (check == "Да")
+    {
+        ListAcc<T> call = new ListAcc<T>;
+        call.Write();
+    }
+        
 }
