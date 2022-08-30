@@ -33,7 +33,7 @@ static void Main(string[] args)
     check = Console.ReadLine();
     if (check == "Да")
     {
-        ListAcc<T> call = new ListAcc<T>;
+        ListAcc<T> call = new ListAcc<T>();
         call.Write();
     }
         
