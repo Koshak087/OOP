@@ -18,13 +18,13 @@ static void Main(string[] args)
     }
 
     Random rnd = new Random();
-    long num = (long)(rnd.NextDouble()*4999999999999 - 40000000000000)* long.MaxValue;
+    long num = (long)(rnd.NextDouble() * 4999999999999 - 40000000000000) * long.MaxValue;
     Console.WriteLine("Введите начальную сумму(пример: 50000):");
-    int sBall = Convert.ToInt32( Console.ReadLine());
+    int sBall = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine("Выеберети тип счета (0 - крдитный, 1 - дебетовый, 2 - накопительный):");
-    int tAcc = Convert.ToInt32( Console.ReadLine());
-    
+    Console.WriteLine("Выеберети тип счета (крдитный, дебетовый, накопительный):");
+    string tAcc = Console.ReadLine();
+
 
     Account newAcc = new Account(fname, sname, num, sBall, tAcc);
 
@@ -36,5 +36,5 @@ static void Main(string[] args)
         ListAcc<T> call = new ListAcc<T>();
         call.Write();
     }
-        
+
 }

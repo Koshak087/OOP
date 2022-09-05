@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace HW
 {
+
     class ListAcc<T>
     {
-        private string name;
-        private string surname;
-        private long numAcc;
-        private int ballance;
-        private int type;
+        public string name;
+        public string surname;
+        public long numAcc;
+        public int ballance;
+        public string type;
         public static int Count { get; }
 
-        public ListAcc(string name, string surname, long numAcc, int ballance, int type)
+        public ListAcc(string name, string surname, long numAcc, int ballance, string type)
         {
             this.name = name;
             this.surname = surname;
@@ -25,21 +26,27 @@ namespace HW
             this.type = type;
         }
 
-        internal static void Add(ListAcc<T> p)
+        public ListAcc() { }
+
+        internal static void Add(ListAcc<T>)
         {
-         
-            throw new NotImplementedException();
-            
+
         }
 
         public string Write()
         {
-            
+
             Console.WriteLine($"Колличество человек в списке: {(object)ListAcc<T>.Count}");
             Console.WriteLine("Введите номер человека:");
-            var name = Convert.ToInt32(Console.ReadLine());
-            long acc = name;
-            string R = Console.WriteLine(value: $"Имя: {this.name[name]};\nФамилия: {this.surname[name]};\nНомер счета: {this.numAcc[acc]};\nБаланс: {this.ballance[name]};\nТип счета: {this.type[name]}");
+            int name = Convert.ToInt32(Console.ReadLine());
+            long acc = this.numAcc;
+            int ball = this.ballance;
+
+            Type typeacc = typeof(TypeAcc);
+
+
+
+            string R = Console.WriteLine(value: $"Имя: {this.name[name]};\nФамилия: {this.surname[name]};\nНомер счета: {acc};\nБаланс: {this.ballance};\nТип счета: {this.type[name]}");
             return R;
         }
     }
